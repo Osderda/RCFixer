@@ -16,9 +16,9 @@ using RCFixer.Properties;
 
 namespace RCFixer.repair
 {
-    public partial class _4 : Form
+    public partial class _10 : Form
     {
-        public _4()
+        public _10()
         {
             InitializeComponent();
             if (!RCFixer.Settings.Default.TR)
@@ -90,6 +90,9 @@ namespace RCFixer.repair
                     label1.Text = "Onarım tamamlandı.";
                     MessageBox.Show("Yazılım indirildi ve başlatıldı. Lütfen yazılım zaten kuruluysa \"onar\" butonuna tıklayın.", "RCFixer", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
+                await Task.Delay(1300);
+                panel1.Visible = true;
+                panel2.Visible = false;
             }
             catch (Exception ex)
             {
@@ -167,20 +170,10 @@ namespace RCFixer.repair
             panel1.Visible = true;
             panel2.Visible = false;
         }
-        private void ıconButton3_Click(object sender, EventArgs e)
+       
+        private void panel3_Paint(object sender, PaintEventArgs e)
         {
-            //https://www.microsoft.com/en-us/download/confirmation.aspx?id=35
-            Process.Start("https://www.microsoft.com/en-us/download/confirmation.aspx?id=35");
-            if (!RCFixer.Settings.Default.TR)
-            {
-                label1.Text = langEN.Repair1Solutionlabel1Repaired;
-                MessageBox.Show(langEN.Repair4SolutionMsgBox1, "RCFixer", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }
-            else
-            {
-                label1.Text = "Onarım tamamlandı.";
-                MessageBox.Show("Yazılım indirildi ve başlatıldı. Lütfen yazılım zaten kuruluysa \"onar\" butonuna tıklayın.", "RCFixer", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }
+
         }
     }
 }

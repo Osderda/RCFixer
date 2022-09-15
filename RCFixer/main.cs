@@ -87,10 +87,10 @@ namespace RCFixer
             //AddForm(new panels.space());
             AddForm(new panels._7());
             AddForm(new panels.space());
-            AddForm(new panels._8());
-            AddForm(new panels.space());
-            AddForm(new panels._9());
-            AddForm(new panels.space());
+          //  AddForm(new panels._8());
+            //AddForm(new panels.space());
+        //    AddForm(new panels._9());
+         //   AddForm(new panels.space());
             AddForm(new panels._10());
             timer1.Start();
         }

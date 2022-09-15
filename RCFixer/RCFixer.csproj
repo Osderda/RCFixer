@@ -151,6 +151,12 @@
     <Compile Include="panels\1.Designer.cs">
       <DependentUpon>1.cs</DependentUpon>
     </Compile>
+    <Compile Include="repair\10.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="repair\10.Designer.cs">
+      <DependentUpon>10.cs</DependentUpon>
+    </Compile>
     <Compile Include="repair\7.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -242,6 +248,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="repair\10.resx">
+      <DependentUpon>10.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="repair\7.resx">
       <DependentUpon>7.cs</DependentUpon>
     </EmbeddedResource>
