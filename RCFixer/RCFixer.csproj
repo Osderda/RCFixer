@@ -1,0 +1,296 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{A091A71F-CFBA-4A7B-AC24-89B62613098D}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>RCFixer</RootNamespace>
+    <AssemblyName>RCFixer</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Bunifu_UI_v1.5.3">
+      <HintPath>..\..\Osderda Planet\Osderda Planet\bin\x64\Release\Bunifu_UI_v1.5.3.dll</HintPath>
+    </Reference>
+    <Reference Include="DotNetZip, Version=1.16.0.0, Culture=neutral, PublicKeyToken=6583c7c814667745, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\DotNetZip.dll</HintPath>
+    </Reference>
+    <Reference Include="FontAwesome.Sharp, Version=6.1.1.0, Culture=neutral, PublicKeyToken=d16d1e4e568ec10f, processorArchitecture=MSIL">
+      <HintPath>..\packages\FontAwesome.Sharp.6.1.1\lib\net472\FontAwesome.Sharp.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="System">
+      <HintPath>C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.7.2\System.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Core" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xaml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ClientMessageBox.cs" />
+    <Compile Include="main.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="main.Designer.cs">
+      <DependentUpon>main.cs</DependentUpon>
+    </Compile>
+    <Compile Include="o\CustomMsgBox.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="o\CustomMsgBox.Designer.cs">
+      <DependentUpon>CustomMsgBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="o\LangSelect.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="o\LangSelect.Designer.cs">
+      <DependentUpon>LangSelect.cs</DependentUpon>
+    </Compile>
+    <Compile Include="panels\10.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="panels\10.Designer.cs">
+      <DependentUpon>10.cs</DependentUpon>
+    </Compile>
+    <Compile Include="panels\9.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="panels\9.Designer.cs">
+      <DependentUpon>9.cs</DependentUpon>
+    </Compile>
+    <Compile Include="panels\8.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="panels\8.Designer.cs">
+      <DependentUpon>8.cs</DependentUpon>
+    </Compile>
+    <Compile Include="panels\7.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="panels\7.Designer.cs">
+      <DependentUpon>7.cs</DependentUpon>
+    </Compile>
+    <Compile Include="panels\6.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="panels\6.Designer.cs">
+      <DependentUpon>6.cs</DependentUpon>
+    </Compile>
+    <Compile Include="panels\5.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="panels\5.Designer.cs">
+      <DependentUpon>5.cs</DependentUpon>
+    </Compile>
+    <Compile Include="panels\4.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="panels\4.Designer.cs">
+      <DependentUpon>4.cs</DependentUpon>
+    </Compile>
+    <Compile Include="panels\space.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="panels\space.Designer.cs">
+      <DependentUpon>space.cs</DependentUpon>
+    </Compile>
+    <Compile Include="panels\3.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="panels\3.Designer.cs">
+      <DependentUpon>3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="panels\2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="panels\2.Designer.cs">
+      <DependentUpon>2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="panels\1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="panels\1.Designer.cs">
+      <DependentUpon>1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="repair\4.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="repair\4.Designer.cs">
+      <DependentUpon>4.cs</DependentUpon>
+    </Compile>
+    <Compile Include="repair\3.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="repair\3.Designer.cs">
+      <DependentUpon>3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="repair\2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="repair\2.Designer.cs">
+      <DependentUpon>2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="repair\1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="repair\1.Designer.cs">
+      <DependentUpon>1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="WinAPI.cs" />
+    <Compile Include="lang.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="main.resx">
+      <DependentUpon>main.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="o\CustomMsgBox.resx">
+      <DependentUpon>CustomMsgBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="o\LangSelect.resx">
+      <DependentUpon>LangSelect.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="panels\10.resx">
+      <DependentUpon>10.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="panels\9.resx">
+      <DependentUpon>9.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="panels\8.resx">
+      <DependentUpon>8.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="panels\7.resx">
+      <DependentUpon>7.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="panels\6.resx">
+      <DependentUpon>6.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="panels\5.resx">
+      <DependentUpon>5.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="panels\4.resx">
+      <DependentUpon>4.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="panels\space.resx">
+      <DependentUpon>space.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="panels\3.resx">
+      <DependentUpon>3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="panels\2.resx">
+      <DependentUpon>2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="panels\1.resx">
+      <DependentUpon>1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="repair\4.resx">
+      <DependentUpon>4.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="repair\3.resx">
+      <DependentUpon>3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="repair\2.resx">
+      <DependentUpon>2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="repair\1.resx">
+      <DependentUpon>1.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <None Include="Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\exclamation.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\information.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\question.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\chat.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\error.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\TR.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\US.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\RealUI-Installer.exe" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
