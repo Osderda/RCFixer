@@ -32,5 +32,11 @@ namespace RCFixer.panels
         {
             Process.Start(RCFixer.Properties.Resources.topicURL);
         }
+
+        private void ıconButton1_Click(object sender, EventArgs e)
+        {
+
+            new repair._7().ShowDialog();
+        }
     }
 }

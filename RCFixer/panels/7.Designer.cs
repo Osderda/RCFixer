@@ -51,6 +51,7 @@ namespace RCFixer.panels
             this.ıconButton1.Text = "Onar";
             this.ıconButton1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.ıconButton1.UseVisualStyleBackColor = false;
+            this.ıconButton1.Click += new System.EventHandler(this.ıconButton1_Click);
             // 
             // ıconButton2
             // 

@@ -83,8 +83,8 @@ namespace RCFixer
             AddForm(new panels.space());
             AddForm(new panels._5());
             AddForm(new panels.space());
-            AddForm(new panels._6());
-            AddForm(new panels.space());
+            //AddForm(new panels._6());
+            //AddForm(new panels.space());
             AddForm(new panels._7());
             AddForm(new panels.space());
             AddForm(new panels._8());
