@@ -34,6 +34,7 @@ using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+
 namespace RCFixer
 {
     public partial class main : Form
@@ -46,6 +47,7 @@ namespace RCFixer
             this.ControlBox = false;
             this.DoubleBuffered = true;
             WinAPI.AnimateWindow(this.Handle, 300, WinAPI.BLENDA);
+            label2.Text = "V"+UpdateService.version;
             if (!Settings.Default.autoLangDetectSys)
             {
                 if (CultureInfo.InstalledUICulture.TwoLetterISOLanguageName == "tr")
@@ -68,8 +70,12 @@ namespace RCFixer
                 }
             }
             if (!lang.TR) wtitle.Text = langEN.WindowTitle;
-            
+
+            Task.Run(UpdateService.checkForUpdate).ContinueWith(result => {
+                if (result.Result) UpdateService.showUpdateNotice();
+            });
         }
+      
         private Form currentForm;
         public async void AddForm(Form childform)
         {
@@ -108,6 +114,12 @@ namespace RCFixer
             WinAPI.SendMessage(this.Handle, 0x112, 0xf012, 0);
         }
         private void label1_MouseDown(object sender, MouseEventArgs e)
+        {
+            WinAPI.ReleaseCapture();
+            WinAPI.SendMessage(this.Handle, 0x112, 0xf012, 0);
+        }
+
+        private void label2_MouseDown(object sender, MouseEventArgs e)
         {
             WinAPI.ReleaseCapture();
             WinAPI.SendMessage(this.Handle, 0x112, 0xf012, 0);
@@ -180,5 +192,6 @@ namespace RCFixer
         {
             label1.Visible = false;
         }
+
     }
 }

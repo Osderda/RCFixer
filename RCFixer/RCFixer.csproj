@@ -192,6 +192,7 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
       <DependentUpon>Settings.settings</DependentUpon>
     </Compile>
+    <Compile Include="UpdateService.cs" />
     <Compile Include="WinAPI.cs" />
     <Compile Include="lang.cs" />
     <Compile Include="Program.cs" />
