@@ -1,4 +1,4 @@
-
+s
 ![GitHub](https://img.shields.io/github/license/Osderda/RCFixer?style=for-the-badge)
 
 <br />
@@ -30,7 +30,7 @@
   </p>
 
 # Download
-[Download Compiled file](https://github.com/Osderda/RCFixer/releases/download/Release/RCFixer.zip)
+[Download Compiled file](https://github.com/Osderda/RCFixer/releases/download/v1.0.1/RCFixer.zip)
 
 # Images
 ![image](https://user-images.githubusercontent.com/68977883/190393139-349c1789-d05b-4764-9e02-2c9df7ef5931.png)
