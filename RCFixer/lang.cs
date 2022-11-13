@@ -11,6 +11,7 @@
     class langEN
     {
         public const string WindowTitle = "RealityCheats Reapir Tool EN";
+        public const string autoDetectSystemLangMessage = "Your system language is detected as English and the software language is automatically set to English.";
         //
         public const string Repair1Title = "When I enter the website or RealUI it doesn't\n        open / throws it to a different place?";
         public const string Repair1Button = "Repair";

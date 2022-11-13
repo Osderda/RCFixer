@@ -1,10 +1,36 @@
-﻿using System;
+﻿/*
+MIT License
+
+Copyright (c) 2022 Osderda
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+*/
+
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Diagnostics;
 using System.Drawing;
+using System.Globalization;
 using System.Linq;
+using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -20,10 +46,29 @@ namespace RCFixer
             this.ControlBox = false;
             this.DoubleBuffered = true;
             WinAPI.AnimateWindow(this.Handle, 300, WinAPI.BLENDA);
-            if (!lang.TR)
+            if (!Settings.Default.autoLangDetectSys)
             {
-                wtitle.Text = langEN.WindowTitle;
+                if (CultureInfo.InstalledUICulture.TwoLetterISOLanguageName == "tr")
+                {
+                    RCFixer.Settings.Default.TR = true;
+                    MessageBox.Show("Sistem diliniz Türkçe algılandı ve yazılım dili otomatik olarak Türkçe ayarlandı.", "RCFixer", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    Settings.Default.autoLangDetectSys = true;
+                    Settings.Default.Save();
+                    System.Diagnostics.Process.Start(Application.ExecutablePath);
+                    Application.Exit();
+                }
+                else
+                {
+                    RCFixer.Settings.Default.TR = false;
+                    MessageBox.Show(langEN.autoDetectSystemLangMessage, "RCFixer", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    Settings.Default.autoLangDetectSys = true;
+                    Settings.Default.Save();
+                    System.Diagnostics.Process.Start(Application.ExecutablePath);
+                    Application.Exit();
+                }
             }
+            if (!lang.TR) wtitle.Text = langEN.WindowTitle;
+            
         }
         private Form currentForm;
         public async void AddForm(Form childform)
@@ -87,33 +132,33 @@ namespace RCFixer
             //AddForm(new panels.space());
             AddForm(new panels._7());
             AddForm(new panels.space());
-          //  AddForm(new panels._8());
+            //  AddForm(new panels._8());
             //AddForm(new panels.space());
-        //    AddForm(new panels._9());
-         //   AddForm(new panels.space());
+            //    AddForm(new panels._9());
+            //   AddForm(new panels.space());
             AddForm(new panels._10());
             timer1.Start();
         }
 
         private void ıconButton1_Click(object sender, EventArgs e)
         {
-           /* o.LangSelect lsz = new o.LangSelect();
-            Form ls = Application.OpenForms.Cast<Form>().Where(f => f.GetType() == typeof(o.LangSelect)).FirstOrDefault();
-            if (ls == null)
-            {
-                Invoke(new Action(() =>
-                {
-                    lsz.Show();
-                }));
-            }
-            else
-            {
-                Invoke(new Action(() =>
-                {
-                    lsz.Activate();
-                }));
-            }*/
-            
+            /* o.LangSelect lsz = new o.LangSelect();
+             Form ls = Application.OpenForms.Cast<Form>().Where(f => f.GetType() == typeof(o.LangSelect)).FirstOrDefault();
+             if (ls == null)
+             {
+                 Invoke(new Action(() =>
+                 {
+                     lsz.Show();
+                 }));
+             }
+             else
+             {
+                 Invoke(new Action(() =>
+                 {
+                     lsz.Activate();
+                 }));
+             }*/
+
             o.LangSelect ls = new o.LangSelect();
             if (Application.OpenForms["LangSelect"] == null)
             {

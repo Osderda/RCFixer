@@ -6,12 +6,12 @@ using System.Runtime.InteropServices;
 // denetlenir. Bütünleştirilmiş kod ile ilişkili bilgileri değiştirmek için
 // bu öznitelik değerlerini değiştirin.
 [assembly: AssemblyTitle("RCFixer")]
-[assembly: AssemblyDescription("")]
+[assembly: AssemblyDescription("RC FAQ Helper. By Osderda.")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("")]
+[assembly: AssemblyCompany("Reality Cheats")]
 [assembly: AssemblyProduct("RCFixer")]
-[assembly: AssemblyCopyright("Copyright ©  2022")]
-[assembly: AssemblyTrademark("")]
+[assembly: AssemblyCopyright("Copyright ©  2022 RealityCheats")]
+[assembly: AssemblyTrademark("Osderda, RealityCheats")]
 [assembly: AssemblyCulture("")]
 
 // ComVisible özniteliğinin false olarak ayarlanması bu bütünleştirilmiş koddaki türleri

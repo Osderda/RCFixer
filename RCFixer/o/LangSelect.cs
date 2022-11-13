@@ -67,7 +67,8 @@ namespace RCFixer.o
         {
             RCFixer.Settings.Default.TR = true;
             Settings.Default.Save();
-            Application.Restart();
+            System.Diagnostics.Process.Start(Application.ExecutablePath);
+            Application.Exit();
         }
 
         private void button3_Click(object sender, EventArgs e)
@@ -75,7 +76,8 @@ namespace RCFixer.o
 
             RCFixer.Settings.Default.TR = false;
             Settings.Default.Save();
-            Application.Restart();
+            System.Diagnostics.Process.Start(Application.ExecutablePath);
+            Application.Exit();
         }
     }
 }
